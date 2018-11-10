@@ -1,0 +1,62 @@
+using System;
+using System.Data;
+using System.Linq;
+
+namespace ConsoleApp1
+{
+
+    class Program
+    {
+                        static void Main(string[] args)
+                       {
+                           Console.WriteLine("Zadejte prvni slovo");
+                            string nactene_slovo_1 = Console.ReadLine();
+                           Console.WriteLine("Zadejte druhe slovo");
+                            string nactene_slovo_2 = Console.ReadLine();
+                           Console.WriteLine("Zadejte hledane pismenko");
+                            string hledane_pismeno = Console.ReadLine();
+                           
+                           
+                            int pismenko_ve_slove = 0;
+                           int pismenko_ve_slove2 = 0;
+
+                           foreach (char i in nactene_slovo_1)
+                           {
+
+                               if (i == char.Parse(hledane_pismeno))
+                               {
+                                   pismenko_ve_slove++;
+                               }
+                           }
+                           foreach (char i in nactene_slovo_2)
+                           {
+
+                               if (i == char.Parse(hledane_pismeno))
+                               {
+                                   pismenko_ve_slove2++;
+                               }
+                           }
+
+                           if (pismenko_ve_slove > pismenko_ve_slove2)
+                           {
+                               Console.WriteLine("Slovo s vetsim poctem hledanych pismenek je:");
+                               Console.WriteLine(nactene_slovo_1);
+                           }
+                           else
+                           {
+                               Console.WriteLine("Slovo s vetsim poctem hledanych pismenek je:");
+                               Console.WriteLine(nactene_slovo_2);
+                           }
+
+                           if (pismenko_ve_slove == pismenko_ve_slove2)
+                           {
+                               Console.WriteLine("Slova maji stejny pocet pismen");
+                           }
+                           
+                       }
+     }
+}
+
+
+
+
